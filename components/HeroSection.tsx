@@ -157,21 +157,22 @@ export default function HeroSection() {
                   <div 
                     className="flex transition-transform duration-700 ease-in-out h-full"
                     style={{
-                      transform: `translateX(-${currentSlide * 100}%)`,
-                      width: `${demoSlides.length * 100}%`
+                      width: `${demoSlides.length * 100}%`,
+                      transform: `translateX(-${(currentSlide * 100) / demoSlides.length}%)`,
                     }}
                   >
                     {demoSlides.map((slide, index) => (
                       <div
                         key={index}
-                        className="w-full h-full bg-cover bg-center flex-shrink-0"
+                        className="h-full bg-cover bg-center flex-shrink-0"
                         style={{
+                          width: `${100 / demoSlides.length}%`,
                           backgroundImage: `url('${slide.image}')`,
-                          width: `${100 / demoSlides.length}%`
                         }}
                       ></div>
                     ))}
                   </div>
+
                   
                   {/* Slide Navigation */}
                   <div className="absolute inset-0 flex items-center justify-between p-4">
