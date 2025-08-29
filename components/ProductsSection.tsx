@@ -19,7 +19,7 @@ export default function ProductsSection() {
     { 
       id: 'displays', 
       name: 'Premium Displays', 
-      icon: 'ri-monitor-line'
+      icon: 'ri-tv-2-line'
     },
     { 
       id: 'outdoor-led', 
